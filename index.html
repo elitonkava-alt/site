@@ -3,128 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rampa Inteligente - Acessibilidade</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-    }
-
-    /* ===== PÁGINA 1 ===== */
-    #page1 {
-      height: 100vh;
-      background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), 
-                  url('https://via.placeholder.com/1920x1080?text=Rampa+Inteligente'); /* Troque depois pela sua imagem */
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-      transition: opacity 1s ease;
-    }
-
-    .content {
-      max-width: 900px;
-      padding: 40px;
-    }
-
-    h1 {
-      font-size: 3.2rem;
-      line-height: 1.2;
-      margin-bottom: 25px;
-    }
-
-    p {
-      font-size: 1.35rem;
-      margin-bottom: 50px;
-      opacity: 0.95;
-    }
-
-    .btn-comecar {
-      padding: 18px 60px;
-      font-size: 1.4rem;
-      font-weight: bold;
-      background-color: #0066ff;
-      color: white;
-      border: none;
-      border-radius: 50px;
-      cursor: pointer;
-      transition: all 0.4s;
-    }
-
-    .btn-comecar:hover {
-      background-color: #0052cc;
-      transform: translateY(-5px);
-    }
-
-    /* ===== PÁGINA 3 ===== */
-    #page3 {
-      min-height: 100vh;
-      background-color: #f4f7fa;
-      padding: 80px 20px;
-      display: none;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    h2 {
-      font-size: 2.8rem;
-      text-align: center;
-      margin-bottom: 60px;
-      color: #1a1a1a;
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Página 1 -->
-  <section id="page1">
-    <div class="content">
-      <h1>A importância do acesso a pessoa com necessidades especiais na parte física e robótica.</h1>
-      <p>Este espaço é ideal para apresentar seu projeto de forma clara e impactante.</p>
-      <button class="btn-comecar" onclick="irParaPagina3()">Começar</button>
-    </div>
-  </section>
-
-  <!-- Página 3 -->
-  <section id="page3">
-    <div class="container">
-      <h2>Página 3 - Conteúdo do Projeto</h2>
-      <p>Aqui você vai colocar todo o conteúdo da página 3 (explicação sobre rampa, física, robótica, cálculos, etc.).</p>
-      
-      <!-- Você pode adicionar mais conteúdos aqui depois -->
-    </div>
-  </section>
-
-  <script>
-    function irParaPagina3() {
-      const page1 = document.getElementById('page1');
-      page1.style.opacity = '0';
-
-      setTimeout(() => {
-        page1.style.display = 'none';
-        document.getElementById('page3').style.display = 'block';
-      }, 900);
-    }
-  </script>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rampa Inteligente</title>
   <style>
     * {
@@ -135,61 +13,72 @@
 
     body {
       font-family: 'Segoe UI', Arial, sans-serif;
+      background-color: #000;
     }
 
-    /* Página 1 - Inicial */
+    /* ===== PÁGINA 1 ===== */
     #page1 {
       height: 100vh;
-      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), 
-                  url('https://via.placeholder.com/1920x1080?text=Rampa+Inteligente');
-      background-size: cover;
-      background-position: center;
       display: flex;
       align-items: center;
       justify-content: center;
-      text-align: center;
-      color: white;
-      transition: opacity 1s ease;
-    }
-
-    .content {
-      max-width: 850px;
+      gap: 80px;
       padding: 40px;
+      flex-wrap: wrap;
     }
 
-    h1 {
-      font-size: 3.2rem;
-      margin-bottom: 20px;
+    .texto-roxo {
+      background: linear-gradient(135deg, #6b00ff, #a020f0);
+      color: white;
+      padding: 50px 40px;
+      border-radius: 20px;
+      max-width: 420px;
+      box-shadow: 0 10px 30px rgba(107, 0, 255, 0.4);
     }
 
-    p {
-      font-size: 1.4rem;
-      margin-bottom: 50px;
+    .texto-roxo h1 {
+      font-size: 2.1rem;
+      line-height: 1.3;
+      font-weight: 700;
+    }
+
+    .cadeira-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .cadeira {
+      font-size: 280px;
+      filter: drop-shadow(0 10px 20px rgba(255,255,255,0.2));
     }
 
     .btn-comecar {
-      padding: 18px 65px;
-      font-size: 1.35rem;
+      padding: 16px 70px;
+      font-size: 1.4rem;
       font-weight: bold;
-      background-color: #0066ff;
+      background: linear-gradient(135deg, #6b00ff, #c026d3);
       color: white;
       border: none;
       border-radius: 50px;
       cursor: pointer;
-      transition: 0.4s;
+      transition: all 0.4s;
+      box-shadow: 0 8px 20px rgba(107, 0, 255, 0.3);
     }
 
     .btn-comecar:hover {
-      background-color: #0052cc;
-      transform: scale(1.05);
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(107, 0, 255, 0.5);
     }
 
-    /* Página 3 - Menu com 6 opções */
-    #page3 {
+    /* ===== PÁGINA 2 (com 6 opções) ===== */
+    #page2 {
       min-height: 100vh;
-      background-color: #f8f9fa;
+      background-color: #0a0a0a;
       padding: 80px 20px;
       display: none;
+      color: white;
     }
 
     .container {
@@ -199,40 +88,39 @@
 
     h2 {
       text-align: center;
-      font-size: 2.8rem;
+      font-size: 2.6rem;
       margin-bottom: 70px;
-      color: #1a1a1a;
     }
 
     .options-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 25px;
     }
 
     .option-card {
-      background: white;
-      border-radius: 15px;
+      background: #1a1a1a;
+      border-radius: 18px;
       padding: 35px 25px;
       text-align: center;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
       transition: all 0.3s ease;
-      cursor: pointer;
+      border: 1px solid #333;
     }
 
     .option-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+      background: #2a2a2a;
+      transform: translateY(-12px);
+      border-color: #8b5cf6;
     }
 
     .option-card h3 {
-      font-size: 1.5rem;
-      margin: 20px 0 15px;
-      color: #1a1a1a;
+      font-size: 1.55rem;
+      margin-bottom: 15px;
+      color: #e0e0e0;
     }
 
     .option-card p {
-      color: #555;
+      color: #aaa;
       line-height: 1.5;
     }
   </style>
@@ -241,22 +129,64 @@
 
   <!-- Página 1 -->
   <section id="page1">
-    <div class="content">
+    <div class="texto-roxo">
       <h1>A importância do acesso a pessoa com necessidades especiais na parte física e robótica.</h1>
-      <p>Explorando a Física, Acessibilidade e Robótica</p>
-      <button class="btn-comecar" onclick="irParaPagina3()">Começar</button>
+    </div>
+
+    <div class="cadeira-container">
+      <div class="cadeira">♿</div>
+      <button class="btn-comecar" onclick="irParaPagina2()">Começar</button>
     </div>
   </section>
 
-  <!-- Página 3 - Menu com 6 opções -->
-  <section id="page3">
+  <!-- Página 2 - 6 Opções -->
+  <section id="page2">
     <div class="container">
       <h2>Escolha um tema para explorar</h2>
       
       <div class="options-grid">
-        <div class="option-card" onclick="irParaPagina('pagina4')">
+        <div class="option-card" onclick="irPara('opcao1')">
           <h3>Opção 1</h3>
-          <p>Clique aqui para modificar o título e texto desta opção</p>
+          <p>Descrição breve desta opção</p>
         </div>
+        <div class="option-card" onclick="irPara('opcao2')">
+          <h3>Opção 2</h3>
+          <p>Descrição breve desta opção</p>
+        </div>
+        <div class="option-card" onclick="irPara('opcao3')">
+          <h3>Opção 3</h3>
+          <p>Descrição breve desta opção</p>
+        </div>
+        <div class="option-card" onclick="irPara('opcao4')">
+          <h3>Opção 4</h3>
+          <p>Descrição breve desta opção</p>
+        </div>
+        <div class="option-card" onclick="irPara('opcao5')">
+          <h3>Opção 5</h3>
+          <p>Descrição breve desta opção</p>
+        </div>
+        <div class="option-card" onclick="irPara('opcao6')">
+          <h3>Opção 6</h3>
+          <p>Descrição breve desta opção</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-       
+  <script>
+    function irParaPagina2() {
+      document.getElementById('page1').style.opacity = '0';
+      setTimeout(() => {
+        document.getElementById('page1').style.display = 'none';
+        document.getElementById('page2').style.display = 'block';
+      }, 800);
+    }
+
+    function irPara(pagina) {
+      alert(`Você clicou em: ${pagina}\n\nAqui você vai criar a página correspondente.`);
+      // No futuro você pode mudar para:
+      // window.location.href = pagina + ".html";
+    }
+  </script>
+</body>
+</html>
