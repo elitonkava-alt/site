@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rampa Inteligente</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+
+    /* Página 1 - Inicial */
+    #page1 {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), 
+                  url('https://via.placeholder.com/1920x1080?text=Rampa+Inteligente');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      transition: opacity 1s ease;
+    }
+
+    .content {
+      max-width: 850px;
+      padding: 40px;
+    }
+
+    h1 {
+      font-size: 3.2rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.4rem;
+      margin-bottom: 50px;
+    }
+
+    .btn-comecar {
+      padding: 18px 65px;
+      font-size: 1.35rem;
+      font-weight: bold;
+      background-color: #0066ff;
+      color: white;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: 0.4s;
+    }
+
+    .btn-comecar:hover {
+      background-color: #0052cc;
+      transform: scale(1.05);
+    }
+
+    /* Página 3 - Menu com 6 opções */
+    #page3 {
+      min-height: 100vh;
+      background-color: #f8f9fa;
+      padding: 80px 20px;
+      display: none;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2.8rem;
+      margin-bottom: 70px;
+      color: #1a1a1a;
+    }
+
+    .options-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 25px;
+    }
+
+    .option-card {
+      background: white;
+      border-radius: 15px;
+      padding: 35px 25px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .option-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+
+    .option-card h3 {
+      font-size: 1.5rem;
+      margin: 20px 0 15px;
+      color: #1a1a1a;
+    }
+
+    .option-card p {
+      color: #555;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Página 1 -->
+  <section id="page1">
+    <div class="content">
+      <h1>A importância do acesso a pessoa com necessidades especiais na parte física e robótica.</h1>
+      <p>Explorando a Física, Acessibilidade e Robótica</p>
+      <button class="btn-comecar" onclick="irParaPagina3()">Começar</button>
+    </div>
+  </section>
+
+  <!-- Página 3 - Menu com 6 opções -->
+  <section id="page3">
+    <div class="container">
+      <h2>Escolha um tema para explorar</h2>
+      
+      <div class="options-grid">
+        <div class="option-card" onclick="irParaPagina('pagina4')">
+          <h3>Opção 1</h3>
+          <p>Clique aqui para modificar o título e texto desta opção</p>
+        </div>
+
+       
