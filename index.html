@@ -16,7 +16,7 @@
       color: white;
     }
 
-    /* Página 1 - Tela Inicial */
+    /* Página 1 - Inicial */
     #page1 {
       height: 100vh;
       display: flex;
@@ -43,13 +43,14 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 40px;
+      gap: 30px;
     }
     .cadeira {
       font-size: 280px;
       filter: drop-shadow(0 10px 20px rgba(255,255,255,0.2));
     }
-    .btn-comecar {
+
+    .btn-comecar, .btn-referencias {
       padding: 16px 70px;
       font-size: 1.4rem;
       font-weight: bold;
@@ -61,7 +62,7 @@
       transition: all 0.4s;
       box-shadow: 0 8px 20px rgba(107, 0, 255, 0.3);
     }
-    .btn-comecar:hover {
+    .btn-comecar:hover, .btn-referencias:hover {
       transform: translateY(-5px);
       box-shadow: 0 15px 30px rgba(107, 0, 255, 0.5);
     }
@@ -102,16 +103,6 @@
       transform: translateY(-12px);
       border-color: #8b5cf6;
     }
-    .option-card h3 {
-      font-size: 1.55rem;
-      margin-bottom: 15px;
-      color: #e0e0e0;
-    }
-    .option-card p {
-      color: #aaa;
-      line-height: 1.5;
-      font-size: 1rem;
-    }
 
     /* Páginas Internas */
     .pagina-interna {
@@ -128,6 +119,24 @@
       border-radius: 20px;
       border: 1px solid #333;
     }
+    .imagem-container {
+      width: 100%;
+      height: 380px;
+      background: #222;
+      border-radius: 15px;
+      margin: 25px 0;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px dashed #555;
+    }
+    .imagem-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
     .btn-voltar {
       display: inline-flex;
       align-items: center;
@@ -143,14 +152,13 @@
       margin-bottom: 30px;
     }
     .btn-voltar:hover {
-      background: linear-gradient(135deg, #7c3aed, #a78bfa);
       transform: translateX(-8px);
       box-shadow: 0 8px 20px rgba(139, 92, 246, 0.4);
     }
 
     h1.pagina-titulo {
       font-size: 2.8rem;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
       color: #c026d3;
     }
   </style>
@@ -165,13 +173,14 @@
     <div class="cadeira-container">
       <div class="cadeira">♿</div>
       <button class="btn-comecar" onclick="irParaPagina2()">Começar</button>
+      <button class="btn-referencias" onclick="irParaReferencias()">Referências Bibliográficas</button>
     </div>
   </section>
 
   <!-- Página 2 - Menu -->
   <section id="page2">
     <div class="container">
-      <h2>Acessibilidade Com a Fisica e a Robotica.</h2>
+      <h2>Acessibilidade Com a Física e a Robótica</h2>
       
       <div class="options-grid">
         <div class="option-card" onclick="irPara('cadeira-eletrica')">
@@ -202,16 +211,22 @@
     </div>
   </section>
 
-  <!-- PÁGINAS INTERNAS -->
+  <!-- ==================== PÁGINAS INTERNAS ==================== -->
 
   <section id="cadeira-eletrica" class="pagina-interna">
     <div class="conteudo">
       <a href="#" onclick="voltarParaMenu(); return false;" class="btn-voltar">← Voltar ao Menu</a>
       <h1 class="pagina-titulo">Cadeira de Rodas Elétrica</h1>
-      <p>A motorização é o coração das cadeiras de rodas elétricas. Ela utiliza dois motores controlados por um módulo eletrônico através do joystick.
-Para andar em frente os motores giram na mesma velocidade, para curvar um gira mais rápido que o outro, e para girar no lugar giram em sentidos opostos.
-A potência dos motores influencia velocidade, capacidade de subir rampas e superar obstáculos, mas o excesso reduz a autonomia da bateria.
-O sistema inclui transmissão para aumentar o torque e freios que podem ser desativados para uso manual</p>
+      
+      <div class="imagem-container">
+        <img src="https://images.tcdn.com.br/img/img_prod/1441011/cadeira_de_rodas_motorizada_eltrica_leve_dobrvel_w_1_20251202113346_e6f12b7f2442.png" alt="Cadeira de Rodas Elétrica">
+      </div>
+
+      <p>A motorização é o coração das cadeiras de rodas elétricas, composta por dois motores controlados por um módulo eletrônico via joystick. Para avançar, os motores giram na mesma velocidade; para curvas, um gira mais rápido que o outro.
+
+Já para girar no próprio eixo, os motores funcionam em sentidos opostos. A potência influencia a velocidade, a subida de rampas e a superação de obstáculos.
+
+Porém, potência excessiva pode reduzir a autonomia da bateria. O sistema inclui transmissão para aumentar o torque e freios que podem ser liberados para uso manual.</p>
     </div>
   </section>
 
@@ -219,10 +234,17 @@ O sistema inclui transmissão para aumentar o torque e freios que podem ser desa
     <div class="conteudo">
       <a href="#" onclick="voltarParaMenu(); return false;" class="btn-voltar">← Voltar ao Menu</a>
       <h1 class="pagina-titulo">Elevador Hidráulico</h1>
-      <p>O elevador hidráulico funciona com base no Princípio de Pascal, que afirma que a pressão aplicada em um líquido se transmite igualmente em todas as direções.
-O sistema é composto por dois pistões de diâmetros diferentes conectados por óleo hidráulico. Uma pequena força aplicada no pistão menor gera uma grande força no pistão maior, capaz de levantar a cabine.
-Ele é amplamente utilizado em postos de gasolina, oficinas mecânicas e plataformas de petróleo, e vem sendo cada vez mais adotado em edifícios por não precisar de casa de máquinas.
-A maquinaria fica compacta, geralmente em um armário no piso inferior, ao lado da cabine, tornando a instalação mais simples e econômica.</p>
+      
+      <div class="imagem-container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBtW2izJwUojask-ZbmBMSkEO9FjR5gdd22A&s" alt="Elevador Hidráulico">
+      </div>
+
+      <p>O elevador hidráulico baseia-se no Princípio de Pascal, onde a pressão aplicada em um líquido se transmite igualmente em todas as direções.
+O sistema utiliza dois pistões de diâmetros diferentes ligados por óleo hidráulico.
+
+Uma pequena força no pistão menor gera uma força maior no pistão maior, levantando a cabine. É muito usado em postos de gasolina, oficinas mecânicas e plataformas de petróleo.
+
+Também vem sendo adotado em edifícios por não precisar de casa de máquinas. Sua estrutura é compacta, com equipamentos geralmente instalados no piso inferior, reduzindo custos.</p>
     </div>
   </section>
 
@@ -230,8 +252,15 @@ A maquinaria fica compacta, geralmente em um armário no piso inferior, ao lado 
     <div class="conteudo">
       <a href="#" onclick="voltarParaMenu(); return false;" class="btn-voltar">← Voltar ao Menu</a>
       <h1 class="pagina-titulo">Muleta com Sensor de Proximidade</h1>
+      
+      <div class="imagem-container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcjMQIxi3FTK-aqS1Jt66otTaU2Y0n65pBLw&s" alt="Muleta com Sensor">
+      </div>
+
       <p>Ela utiliza sensores de proximidade (ultrassônicos) que detectam obstáculos à frente, acima da cintura e na altura da cabeça — algo que a bengala branca tradicional não consegue identificar.
+
 Ao detectar um obstáculo, a bengala emite alertas sonoros e vibrações (feedback háptico), avisando o usuário em tempo real.
+
 A estrutura mantém o formato clássico da bengala, mas incorpora componentes eletrônicos no cabo ou na haste, sendo alimentada por bateria, tornando a mobilidade mais segura sem depender de acompanhante.</p>
     </div>
   </section>
@@ -240,22 +269,33 @@ A estrutura mantém o formato clássico da bengala, mas incorpora componentes el
     <div class="conteudo">
       <a href="#" onclick="voltarParaMenu(); return false;" class="btn-voltar">← Voltar ao Menu</a>
       <h1 class="pagina-titulo">Prótese de Corredor</h1>
-      <p>A prótese de corredor, também chamada de “lâmina” ou “blade”, é feita principalmente de fibra de carbono em formato curvo (em J ou C), funcionando como uma mola.
-Ao pisar no chão, a lâmina se comprime e armazena energia cinética do impacto. Na fase de impulsão, ela retorna rapidamente essa energia, impulsionando o atleta para frente com grande eficiência.
-Diferente da perna humana, ela não possui músculos, mas oferece excelente retorno de energia (cerca de 90%), leveza e alta resistência, reduzindo o esforço do corredor.
-É um sistema puramente mecânico, sem eletrônica, projetado para maximizar velocidade e performance em corridas e saltos.</p>
+      
+      <div class="imagem-container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJm2l20aLFSAnjnSVfe9D-6VcpHRiAvvoGDQ&s" alt="Prótese de Corredor">
+      </div>
+
+      <p>A prótese de corredor, conhecida como “lâmina” ou “blade”, é feita de fibra de carbono em formato curvo, funcionando como uma mola altamente eficiente.
+
+Ao pisar, a lâmina comprime e armazena energia do impacto, devolvendo-a rapidamente na impulsão, o que impulsiona o atleta para frente com excelente retorno de energia (cerca de 90%).
+
+É um sistema puramente mecânico, leve e resistente, sem eletrônica, projetado para maximizar velocidade e performance em corridas e saltos.</p>
     </div>
-      <p>
   </section>
 
   <section id="rampa-acessivel" class="pagina-interna">
     <div class="conteudo">
       <a href="#" onclick="voltarParaMenu(); return false;" class="btn-voltar">← Voltar ao Menu</a>
       <h1 class="pagina-titulo">Rampa Acessível</h1>
-      <p>A rampa acessível é uma superfície inclinada projetada para superar desníveis e permitir o deslocamento seguro de pessoas com deficiência, principalmente cadeirantes, seguindo a norma técnica brasileira NBR 9050.
-Sua inclinação máxima recomendada é de 8,33% (1:12), podendo variar conforme o desnível a ser vencido. Quanto maior o desnível, menor deve ser a inclinação para reduzir o esforço.
-A rampa deve possuir largura mínima adequada (ideal 1,50 m), patamares de descanso a cada certo intervalo, corrimãos dos dois lados e piso antiderrapante.
-Além disso, é essencial incluir guias de balizamento laterais para evitar que as rodas saiam da rampa e sinalização tátil e visual para maior segurança.</p>
+      
+      <div class="imagem-container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6KLhiuOq1jif35VQ_ryMBXVxFDFIoqixnsEb8p5xRdhrXUnNZ" alt="Rampa Acessível">
+      </div>
+
+      <p>A rampa acessível é uma superfície inclinada projetada para superar desníveis e permitir o deslocamento seguro de cadeirantes e pessoas com deficiência, conforme a norma brasileira NBR 9050.
+
+Sua inclinação máxima recomendada é de 8,33% (1:12), devendo possuir largura mínima de 1,50 m, piso antiderrapante, corrimãos dos dois lados e patamares de descanso.
+
+É fundamental incluir guias laterais de balizamento e sinalização tátil e visual para garantir maior segurança durante o uso.</p>
     </div>
   </section>
 
@@ -263,12 +303,40 @@ Além disso, é essencial incluir guias de balizamento laterais para evitar que 
     <div class="conteudo">
       <a href="#" onclick="voltarParaMenu(); return false;" class="btn-voltar">← Voltar ao Menu</a>
       <h1 class="pagina-titulo">Torneira Acessível</h1>
-      <p>As torneiras acessíveis são projetadas para facilitar o uso por pessoas com mobilidade reduzida, idosos e cadeirantes.
-Elas possuem alavanca longa ou ergonômica, que permite abrir e fechar a água com pouco esforço, sem necessidade de girar o registro.
-Existem também modelos temporizados (com botão) e com sensor de presença, que promovem maior autonomia e economia de água.
-São ideais para banheiros adaptados, pois seguem as normas de acessibilidade e reduzem o esforço físico no dia a dia.</p>
+      
+      <div class="imagem-container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwsTMndOxsL6R9BbgyDivRctVAs6iuR9iU1g&s" alt="Torneira Acessível">
+      </div>
+
+      <p>As torneiras acessíveis são projetadas para facilitar o uso por pessoas com mobilidade reduzida, idosos e cadeirantes, possuindo alavanca longa ou ergonômica que permite abrir e fechar a água com pouco esforço.
+
+Existem também modelos temporizados (com botão) e com sensor de presença, que oferecem maior autonomia e economia de água.
+
+São ideais para banheiros adaptados, seguindo as normas de acessibilidade e reduzindo significativamente o esforço físico no dia a dia.</p>
     </div>
   </section>
+
+  <!-- Página de Referências (ainda vazia - você pode preencher depois) -->
+  <section id="referencias" class="pagina-interna">
+    <div class="conteudo">
+      <a href="#" onclick="voltarParaMenu(); return false;" class="btn-voltar">← Voltar ao Menu</a>
+      <h1 class="pagina-titulo">Referências Bibliográficas</h1>
+      <p>https://freedom.ind.br/motorizacao-entenda-como-funciona-este-importante-elemento-das-cadeiras-de-rodas-motorizadas/
+
+        https://pt.wikipedia.org/wiki/Elevador_hidr%C3%A1ulico
+
+        https://www.youtube.com/watch?v=g7rTZJTEb74
+
+        https://cpb.org.br/noticias/entenda-como-funcionam-as-proteses-no-esporte-paralimpico/
+
+        https://sienge.com.br/blog/como-projetar-e-calcular-uma-rampa/
+
+        https://www.leroymerlin.com.br/torneiras-especiais
+      </p>
+      <!-- Adicione suas referências aqui -->
+    </div>
+  </section>
+
 
   <script>
     function irParaPagina2() {
@@ -280,21 +348,17 @@ São ideais para banheiros adaptados, pois seguem as normas de acessibilidade e 
     }
 
     function irPara(pagina) {
-      // Esconde todas as seções
-      document.querySelectorAll('section').forEach(sec => {
-        sec.style.display = 'none';
-      });
-      
-      // Mostra a página interna
+      document.querySelectorAll('section').forEach(sec => sec.style.display = 'none');
       document.getElementById(pagina).style.display = 'block';
     }
 
+    function irParaReferencias() {
+      document.querySelectorAll('section').forEach(sec => sec.style.display = 'none');
+      document.getElementById('referencias').style.display = 'block';
+    }
+
     function voltarParaMenu() {
-      // Esconde todas as páginas internas
-      document.querySelectorAll('.pagina-interna').forEach(p => {
-        p.style.display = 'none';
-      });
-      // Mostra o menu novamente
+      document.querySelectorAll('.pagina-interna').forEach(p => p.style.display = 'none');
       document.getElementById('page2').style.display = 'block';
     }
   </script>
