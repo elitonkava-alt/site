@@ -16,7 +16,7 @@
       background-color: #000;
     }
 
-    /* ===== PÁGINA 1 ===== */
+    /* Página 1 - Tela Inicial */
     #page1 {
       height: 100vh;
       display: flex;
@@ -37,7 +37,7 @@
     }
 
     .texto-roxo h1 {
-      font-size: 2.1rem;
+      font-size: 2.15rem;
       line-height: 1.3;
       font-weight: 700;
     }
@@ -72,7 +72,7 @@
       box-shadow: 0 15px 30px rgba(107, 0, 255, 0.5);
     }
 
-    /* ===== PÁGINA 2 (com 6 opções) ===== */
+    /* Página 2 - Menu com 6 opções */
     #page2 {
       min-height: 100vh;
       background-color: #0a0a0a;
@@ -105,6 +105,7 @@
       text-align: center;
       transition: all 0.3s ease;
       border: 1px solid #333;
+      cursor: pointer;
     }
 
     .option-card:hover {
@@ -122,6 +123,7 @@
     .option-card p {
       color: #aaa;
       line-height: 1.5;
+      font-size: 1rem;
     }
   </style>
 </head>
@@ -139,35 +141,40 @@
     </div>
   </section>
 
-  <!-- Página 2 - 6 Opções -->
+  <!-- Página 2 - Menu com 6 opções -->
   <section id="page2">
     <div class="container">
-      <h2>Escolha um tema para explorar</h2>
+      <h2>Acessabilidade com a Fisica e com a Robotica.</h2>
       
       <div class="options-grid">
-        <div class="option-card" onclick="irPara('opcao1')">
-          <h3>Opção 1</h3>
-          <p>Descrição breve desta opção</p>
+        <div class="option-card" onclick="irPara('cadeira-eletrica')">
+          <h3>Cadeira de Rodas Elétrica</h3>
+          <p>Dispositivo motorizado que proporciona maior independência e mobilidade para pessoas com limitações motoras graves.</p>
         </div>
-        <div class="option-card" onclick="irPara('opcao2')">
-          <h3>Opção 2</h3>
-          <p>Descrição breve desta opção</p>
+
+        <div class="option-card" onclick="irPara('elevador-hidraulico')">
+          <h3>Elevador Hidráulico</h3>
+          <p>Sistema que utiliza pressão hidráulica para elevar plataformas ou cadeiras de rodas, facilitando o acesso em desníveis verticais.</p>
         </div>
-        <div class="option-card" onclick="irPara('opcao3')">
-          <h3>Opção 3</h3>
-          <p>Descrição breve desta opção</p>
+
+        <div class="option-card" onclick="irPara('muleta-sensor')">
+          <h3>Muleta com Sensor de Proximidade</h3>
+          <p>Muleta inteligente equipada com sensores que detectam obstáculos próximos, emitindo alertas sonoros ou vibratórios para maior segurança do usuário.</p>
         </div>
-        <div class="option-card" onclick="irPara('opcao4')">
-          <h3>Opção 4</h3>
-          <p>Descrição breve desta opção</p>
+
+        <div class="option-card" onclick="irPara('protese-corredor')">
+          <h3>Prótese de Corredor</h3>
+          <p>Prótese biomecânica avançada projetada para atletas com amputação, oferecendo retorno de energia e maior desempenho durante a corrida.</p>
         </div>
-        <div class="option-card" onclick="irPara('opcao5')">
-          <h3>Opção 5</h3>
-          <p>Descrição breve desta opção</p>
+
+        <div class="option-card" onclick="irPara('rampa-acessivel')">
+          <h3>Rampa Acessível</h3>
+          <p>Plano inclinado projetado para superar desníveis de forma segura, seguindo normas de acessibilidade e facilitando a locomoção de cadeirantes.</p>
         </div>
-        <div class="option-card" onclick="irPara('opcao6')">
-          <h3>Opção 6</h3>
-          <p>Descrição breve desta opção</p>
+
+        <div class="option-card" onclick="irPara('torneira-acessivel')">
+          <h3>Torneira Acessível</h3>
+          <p>Torneira projetada para facilitar o uso por pessoas com mobilidade reduzida, com acionamento por sensor ou alavanca longa, promovendo autonomia no dia a dia.</p>
         </div>
       </div>
     </div>
@@ -183,9 +190,7 @@
     }
 
     function irPara(pagina) {
-      alert(`Você clicou em: ${pagina}\n\nAqui você vai criar a página correspondente.`);
-      // No futuro você pode mudar para:
-      // window.location.href = pagina + ".html";
+      alert(`Você clicou em: ${pagina}\n\nEm breve criaremos a página completa para este tema.`);
     }
   </script>
 </body>
